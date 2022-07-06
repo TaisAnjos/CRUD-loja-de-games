@@ -9,4 +9,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProdutoRepository extends JpaRepository <Produto, Long>{
 	public List <Produto> findAllByDesenvolvedoraContainingIgnoreCase (String desenvolvedora);
+	
+	public List <Produto> findAllByNomeContainingIgnoreCase (String nome);
+	
+	public List <Produto> findAllByPreco (Double preco);
 }
